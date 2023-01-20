@@ -1,0 +1,133 @@
+
+
+Open  c:/> xampp/phpMyAdmin/config.inc
+
+locate /
+$cfg['Servers'][$i]['auth_type'] = 'config';
+
+
+change into /
+$cfg['Servers'][$i]['auth_type'] = 'cookie';
+
+
+
+DDL  -  Data Definition Language
+
+
+  create
+
+  alter
+
+  drop
+
+  truncate
+  
+  rename
+
+
+DML  - Data Manipulation Language
+
+
+
+  insert
+  
+  update
+
+  delete
+
+
+DRL   - Data Retrieval Language
+
+
+  select
+
+
+
+DTL - Data Transaction  Language
+
+
+
+commit     - to save permenantly in DB 
+
+
+savepoint  - to save temporarily in DB
+
+
+rollback   - to undo a transaction, we can rollback to a particular savepoint
+
+             we can't rollback after a commit command
+
+
+
+Example:
+
+
+START TRANSACTION;
+SELECT * from ipl;
+INSERT INTO ipl VALUES('Raina','Chennai');
+SAVEPOINT s1;
+INSERT INTO ipl VALUES('Virat','Banglore');
+SAVEPOINT s2;
+rollback to savepoint s2;
+commit;
+
+
+Arithmetical function sql
+--------------------------
+
+min()   ---- select min(column_name) from table_name;
+max()   ----- select max(column_name) from table_name;
+count() ----- select count(column_name) from table_name;
+avg()   ----- select avg(column_name) from table_name;
+distinct()--- select distinct(column_name) from table_name;
+sum() --- select sum(column_name) from table_name;
+
+select abs(45.34);
+select ceil(45.34);
+select floor(45.34);
+select round(45.34);
+select sqrt(4);
+select 5 mod 2;
+select 5 % 2;
+select 5 div 2;
+select cos(2);
+select exp(2);
+
+
+
+
+
+
+
+
+min will identify the minimum value from the column
+
+max will identify the maximum value from the column
+
+count will dentify the number of attributes from the column
+
+avg will identify the average value of column
+
+distinct will remove duplicate entires from column
+
+Note: distinct() can be used only on column that has repetative entries
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+       
+
